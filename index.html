@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista de Dron - Descubre España desde el aire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <video autoplay muted loop class="background-video">
+      <source src="videos/vista-dron.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <div class="hero-content">
+      <h1>Explora España desde el cielo</h1>
+      <p>Encuentra tu pueblo y descúbrelo a vista de dron</p>
+      <a href="#buscador" class="btn">Buscar municipio</a>
+    </div>
+  </header>
+
+  <section id="buscador" class="search-section">
+    <h2>Busca tu municipio</h2>
+    <form action="buscar.php" method="get">
+      <input type="text" name="q" placeholder="Introduce el nombre del municipio..." required>
+      <button type="submit">Buscar</button>
+    </form>
+  </section>
+
+  <section class="destacados">
+    <h2>Municipios destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/cardedeu.jpg" alt="Cardedeu">
+        <h3>Cardedeu</h3>
+      </div>
+      <div class="card">
+        <img src="images/avila.jpg" alt="Ávila">
+        <h3>Ávila</h3>
+      </div>
+      <div class="card">
+        <img src="images/segovia.jpg" alt="Segovia">
+        <h3>Segovia</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 VistaDeDron.es - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
