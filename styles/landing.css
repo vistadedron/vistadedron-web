@@ -1,0 +1,83 @@
+/* styles/main.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.main-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+
+.header-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.header-overlay h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #0077cc;
+}
+
+.header-overlay p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.sidebar {
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 1rem;
+    width: 200px;
+    position: fixed;
+    top: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.5rem;
+    color: #0077cc;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #e6f2ff;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f1f1f1;
+    color: #888;
+    margin-top: 2rem;
+}
