@@ -6,7 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"] ?? "";
 
     $conn = conectarBD();
-    $stmt = $conn->prepare("SELECT id, email, contrasena_hash, verificado, deshabilitado FROM usuarios WHERE email = ?");
+    
+    // Incluimos nombre para mostrar avatar
+    $stmt = $conn->prepare("SELECT id, nombre, email, contrasena_hash, verificado, deshabilitado FROM usuarios WHERE email = ?");
+
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $resultado = $stmt->get_result();
@@ -19,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } elseif (password_verify($password, $usuario['contrasena_hash'])) {
             session_start();
             $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['nombre']  = $usuario['nombre'];
             header("Location: /backoffice");
             exit;
         } else {

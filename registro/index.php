@@ -6,7 +6,7 @@ include "../functions.php";
 <div class="layout">
     <?php include "../includes/sidebar.php"; ?>
     <main class="content">
-        <div class="login-card form-card">
+       <div class="login-card">
             <h1 class="card-title">Registro de Usuario</h1>
             <form action="/registro/procesar_registro.php" method="POST" class="login-form">
                 <div class="form-group">
